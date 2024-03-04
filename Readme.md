@@ -1,2 +1,3 @@
-ESTE REPOSITÓRIO É DO PROJETO PRATIQUE 
-UC4 - ANHEMBI MORUMBI
+# GEPETO
+
+**Visão do Produto:** Fornecer um sistema de gerenciamento de eventos locais e permitir que o usuário possa marcar e desmarcar presença.
