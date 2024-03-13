@@ -4,9 +4,10 @@ import java.sql.*;
 
 public class ConnectionFactory {
 
-	public Connection getConnection() {
+	public Connection getConnection() throws ClassNotFoundException {
 		try {
-			return DriverManager.getConnection("jdbc:mysql://localhost/gepetojava","root","root@2024");
+			Class.forName("com.mysql.jdbc.Driver"); 
+			return DriverManager.getConnection("jdbc:mysql://localhost:3306/gepetojava","root","root@2024");
 		}         
 			catch(SQLException excecao) {
 				throw new RuntimeException(excecao);
