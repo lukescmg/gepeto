@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class ConnectionFactory {
 
-	public static void main(String[] args) throws SQLException {
+	public Connection getConnection() throws SQLException {
 		
 		Connection conexao = null;
 		
@@ -20,9 +20,11 @@ public class ConnectionFactory {
 		} finally {
 			if (conexao != null) {
 				System.out.println("Banco conectado com sucesso.");
-				conexao.close();
+				return conexao;
 			}
 		}
+		return conexao;
+		
 		
 		
 	}
