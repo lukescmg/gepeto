@@ -9,9 +9,9 @@ public class ConnectionFactory {
 		Connection conexao = null;
 		
 		try {
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("com.mysql.cj.jdbc.Driver");
 		
-		conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/?user=root", "root", "root@2024");
+		conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/gepeto", "root", "root@2024");
 
 		} catch (ClassNotFoundException ex) {
 			System.out.println("Driver do banco de dados não encontrado");
@@ -19,6 +19,7 @@ public class ConnectionFactory {
 			System.out.println("Ocorreu um erro ao acessar o banco: " + ex.getMessage());
 		} finally {
 			if (conexao != null) {
+				System.out.println("Banco conectado com sucesso.");
 				conexao.close();
 			}
 		}
