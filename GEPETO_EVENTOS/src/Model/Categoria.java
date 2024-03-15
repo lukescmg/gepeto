@@ -1,14 +1,16 @@
 package Model;
 
+import java.util.UUID;
+
 public class Categoria {
-	String CategoriaGUID;
+	UUID CategoriaGUID;
 	String CategoriaNome;
-	String CategoriaStatus;
+	Boolean CategoriaStatus;
 	
-	public String getCategoriaGUID() {
+	public UUID getCategoriaGUID() {
 		return CategoriaGUID;
 	}
-	public void setCategoriaGUID(String CategoriaGUID) {
+	public void setCategoriaGUID(UUID CategoriaGUID) {
 		this.CategoriaGUID = CategoriaGUID;
 	}
 	public String getCategoriaNome() {
@@ -17,10 +19,10 @@ public class Categoria {
 	public void setCategoriaNome(String CategoriaNome) {
 		this.CategoriaNome = CategoriaNome;
 	}
-	public String getCategoriaStatus() {
+	public Boolean getCategoriaStatus() {
 		return CategoriaStatus;
 	}
-	public void setCategoriaStatus(String CategoriaStatus) {
+	public void setCategoriaStatus(Boolean CategoriaStatus) {
 		this.CategoriaStatus = CategoriaStatus;
 	}
 }
