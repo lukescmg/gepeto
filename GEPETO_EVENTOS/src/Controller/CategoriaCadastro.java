@@ -15,13 +15,13 @@ public class CategoriaCadastro {
 		
 		Categoria categorias = new Categoria();
 		
-		UUID CategoriaGUID = null;
+		UUID CategoriaGUID;
 		String CategoriaNome;
 		Boolean CategoriaStatus = true;
 		
 		CategoriaGUID = UUID.randomUUID();
 		categorias.setCategoriaGUID(CategoriaGUID);
-	
+		
 		System.out.print("Insira a categoria do evento: ");
 		categorias.setCategoriaNome(CategoriaNome = input.next());
 		
