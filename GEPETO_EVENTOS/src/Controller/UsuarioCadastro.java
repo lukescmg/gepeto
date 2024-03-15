@@ -6,8 +6,6 @@ import DAO.UsuarioDAO;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-
-
 public class UsuarioCadastro {
 
 	public static void main(String[] args) throws SQLException
@@ -24,6 +22,9 @@ public class UsuarioCadastro {
 		String UsuarioTelefone;
 		String UsuarioSenha;
 		
+		System.out.print("Insira seu email: ");
+		UsuarioEmail = input.next();
+		
 		System.out.print("Insira seu nome: ");
 		UsuarioNome = input.next();
 		
@@ -35,9 +36,6 @@ public class UsuarioCadastro {
 		
 		System.out.print("Insira seu telefone: ");
 		UsuarioTelefone = input.next();
-		
-		System.out.print("Insira seu email: ");
-		UsuarioEmail = input.next();
 		
 		System.out.print("Insira uma senha: ");
 		UsuarioSenha = input.next();

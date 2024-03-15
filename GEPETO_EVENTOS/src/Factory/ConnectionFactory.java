@@ -17,16 +17,8 @@ public class ConnectionFactory {
 			System.out.println("Driver do banco de dados não encontrado");
 		} catch (SQLException ex) {
 			System.out.println("Ocorreu um erro ao acessar o banco: " + ex.getMessage());
-		} finally {
-			if (conexao != null) {
-				System.out.println("Banco conectado com sucesso.");
-				return conexao;
-			}
 		}
+		
 		return conexao;
-		
-		
-		
 	}
-	
 }
