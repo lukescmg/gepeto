@@ -3,6 +3,7 @@ package DAO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.UUID;
 
 import Factory.ConnectionFactory;
 import Model.Evento;
@@ -10,9 +11,10 @@ import Model.Evento;
 public class EventoDAO {
 	private Connection connection;
 	
+	UUID EventoGUID;
 	String EventoNome;
 	String EventoData;
-	String EventoHorario;
+	int EventoHorario;
 	String EventoDescricao;
 	int EventoFaixaEtaria;
 	double EventoValor;
@@ -22,15 +24,16 @@ public class EventoDAO {
 	}
 	
 	public void adiciona(Evento evento){ 
-        String sql = "INSERT INTO evento (EventoNome,EventoData,EventoHoario,EventoDescricao,EventoFaixaEtaria,EventoValor) VALUES(?,?,?,?,?)";
+        String sql = "INSERT INTO evento(EventoGUID,EventoNome,EventoData,EventoHorario,EventoDescricao,EventoFaixaEtaria,EventoValor) VALUES(?,?,?,?,?,?,?)";
         try { 
             PreparedStatement stmt = connection.prepareStatement(sql);
-            stmt.setString(1, evento.getEventoNome());
-            stmt.setString(2, evento.getEventoData());
-            stmt.setString(3, evento.getEventoHorario());
-            stmt.setString(4, evento.getEventoDescricao());
-            stmt.setInt(5, evento.getEventoFaixaEtaria());
-            stmt.setDouble(6, evento.getEventoValor());
+            stmt.setString(1, evento.getEventoGUID().toString());
+            stmt.setString(2, evento.getEventoNome());
+            stmt.setString(3, evento.getEventoData());
+            stmt.setInt(4, evento.getEventoHorario());
+            stmt.setString(5, evento.getEventoDescricao());
+            stmt.setInt(6, evento.getEventoFaixaEtaria());
+            stmt.setDouble(7, evento.getEventoValor());
             stmt.execute();
             stmt.close();
         } 

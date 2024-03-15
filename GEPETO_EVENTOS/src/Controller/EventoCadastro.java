@@ -2,6 +2,7 @@ package Controller;
 
 import java.sql.SQLException;
 import java.util.Scanner;
+import java.util.UUID;
 
 import DAO.EventoDAO;
 import Model.Evento;
@@ -14,12 +15,16 @@ public class EventoCadastro {
 		
 		Evento eventos = new Evento();
 		
+		UUID EventoGUID;
 		String EventoNome;
 		String EventoData;
-		String EventoHorario;
+		int EventoHorario;
 		String EventoDescricao;
 		int EventoFaixaEtaria;
 		double EventoValor;
+		
+		EventoGUID = UUID.randomUUID();
+		eventos.setEventoGUID(EventoGUID);
 		
 		System.out.print("Insira o nome do evento: ");
 		eventos.setEventoNome(EventoNome = input.next());
@@ -28,7 +33,7 @@ public class EventoCadastro {
 		eventos.setEventoData(EventoData = input.next());
 		
 		System.out.print("Insira o horário do evento: ");
-		eventos.setEventoHorario(EventoHorario = input.next());
+		eventos.setEventoHorario(EventoHorario = input.nextInt());
 		
 		System.out.print("Insira a descrição sobre o evento: ");
 		eventos.setEventoDescricao(EventoDescricao = input.next());
@@ -41,7 +46,7 @@ public class EventoCadastro {
 		EventoValor = input.nextDouble();
 		eventos.setEventoValor(EventoValor); 
 		
-		if ((EventoNome.isEmpty()) || (EventoData.isEmpty()) || (EventoHorario.isEmpty()) || (EventoDescricao.isEmpty())) {
+		if ((EventoNome.isEmpty()) || (EventoData.isEmpty()) || (EventoDescricao.isEmpty())) {
 			System.out.print("Os campos não podem estar vazios");
 			}
 			else {

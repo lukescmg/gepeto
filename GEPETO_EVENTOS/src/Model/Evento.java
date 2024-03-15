@@ -1,18 +1,20 @@
 package Model;
 
+import java.util.UUID;
+
 public class Evento {
-	String EventoGUID;
+	UUID EventoGUID;
 	String EventoNome;
 	String EventoData;
-	String EventoHorario;
+	int EventoHorario;
 	String EventoDescricao;
 	int EventoFaixaEtaria;
 	double EventoValor;
 	
-	public String getEventoGUID() {
+	public UUID getEventoGUID() {
 		return EventoGUID;
 	}
-	public void setEventoGUID(String EventoGUID) {
+	public void setEventoGUID(UUID EventoGUID) {
 		this.EventoGUID = EventoGUID;
 	}
 	
@@ -30,15 +32,15 @@ public class Evento {
 		this.EventoData = EventoData;
 	}
 	
-	public String getEventoHorario() {
+	public int getEventoHorario() {
 		return EventoHorario;
 	}
-	public void setEventoHorario(String EventoHorario) {
+	public void setEventoHorario(int EventoHorario) {
 		this.EventoHorario = EventoHorario;
 	}
 	
 	public String getEventoDescricao() {
-		return EventoGUID;
+		return EventoDescricao;
 	}
 	public void setEventoDescricao(String EventoDescricao) {
 		this.EventoDescricao = EventoDescricao;
