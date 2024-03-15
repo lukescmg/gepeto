@@ -23,7 +23,6 @@ public class CategoriaDAO {
             stmt.setString(1, categoria.getCategoriaGUID().toString());
             stmt.setString(2, categoria.getCategoriaNome());
             stmt.setBoolean(3, categoria.getCategoriaStatus());
-            System.out.println(stmt);
             stmt.execute();
             stmt.close();
         } 
