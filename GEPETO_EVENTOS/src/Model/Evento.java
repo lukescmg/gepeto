@@ -6,8 +6,8 @@ public class Evento {
 	String EventoData;
 	String EventoHorario;
 	String EventoDescricao;
-	String EventoFaixaEtaria;
-	String EventoValor;
+	int EventoFaixaEtaria;
+	double EventoValor;
 	
 	public String getEventoGUID() {
 		return EventoGUID;
@@ -44,17 +44,17 @@ public class Evento {
 		this.EventoDescricao = EventoDescricao;
 	}
 	
-	public String getEventoFaixaEtaria() {
+	public int getEventoFaixaEtaria() {
 		return EventoFaixaEtaria;
 	}
-	public void setEventoFaixaEtaria(String EventoFaixaEtaria) {
+	public void setEventoFaixaEtaria(int EventoFaixaEtaria) {
 		this.EventoFaixaEtaria = EventoFaixaEtaria;
 	}
 	
-	public String getEventoValor() {
-		return EventoGUID;
+	public double getEventoValor() {
+		return EventoValor;
 	}
-	public void setEventoValor(String EventoValor) {
+	public void setEventoValor(double EventoValor) {
 		this.EventoValor = EventoValor;
 	}
 }
