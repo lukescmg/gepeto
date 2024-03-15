@@ -23,22 +23,22 @@ public class UsuarioCadastro {
 		String UsuarioSenha;
 		
 		System.out.print("Insira seu email: ");
-		UsuarioEmail = input.next();
-		
+		usuarios.setUsuarioEmail(UsuarioEmail = input.next());
+	
 		System.out.print("Insira seu nome: ");
-		UsuarioNome = input.next();
+		usuarios.setUsuarioNome(UsuarioNome = input.next());
 		
 		System.out.print("Insira seu sobrenome: ");
-		UsuarioSobrenome = input.next();
+		usuarios.setUsuarioSobrenome(UsuarioSobrenome = input.next());
 		
 		System.out.print("Insira sua data de nascimento: ");
-		UsuarioDataNascimento = input.next();
+		usuarios.setUsuarioDataNascimento(UsuarioDataNascimento = input.next());
 		
 		System.out.print("Insira seu telefone: ");
-		UsuarioTelefone = input.next();
+		usuarios.setUsuarioTelefone(UsuarioTelefone = input.next());
 		
 		System.out.print("Insira uma senha: ");
-		UsuarioSenha = input.next();
+		usuarios.setUsuarioSenha(UsuarioSenha = input.next());
 		
 		if ((UsuarioSenha.isEmpty()) || (UsuarioEmail.isEmpty()) || (UsuarioTelefone.isEmpty()) || (UsuarioDataNascimento.isEmpty() || UsuarioSobrenome.isEmpty() || UsuarioNome.isEmpty())) {
 			System.out.print("Os campos não podem estar vazios");
